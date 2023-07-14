@@ -1,4 +1,6 @@
- public class Mars {
+import java.util.Scanner;
+
+public class Mars {
      public static void main(String[] args) throws InterruptedException {
          String colonyName = "Bronchia";
          int shipPopulation = 300;
@@ -20,6 +22,15 @@
          } else {
              System.out.println("ERROR!!! Flight plan already set. Landing on the Plain");
          }
+
+         Scanner sc = new Scanner(System.in);
+         landingCheck(10);
+
+         GuessingGame guessingGame1 = new GuessingGame(sc);
+
+         MarsExpedition expedition1 = new MarsExpedition(sc);
+
+         FindingList findingList1 = new FindingList(sc);
      }
      public static boolean landingCheck(int minutesLeft) throws InterruptedException {
          for (int i = 0; i < minutesLeft; i++){
